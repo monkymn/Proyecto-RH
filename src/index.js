@@ -9,13 +9,23 @@ app.on('before-quit', () => {
 })
 
 app.on('ready', () =>{
-    let win = new BrowserWindow()
+    let win = new BrowserWindow({
+        show: false,
+        maximizable: false
+        
+    })
+
+    win.once('ready-to-show', () => {
+        win.show()
+    })
 
     win.on('closed', () =>{
         win = null
         app.quit()
 
     })
+
+    win.loadURL(`file://${__dirname}/renderer/index.html`)
 
 })
 
