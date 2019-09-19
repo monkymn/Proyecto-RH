@@ -1,4 +1,4 @@
-'use strict'
+/* 'use strict'
 import { config } from './sql'
 import sql from 'mssql/msnodesqlv8'
 
@@ -22,4 +22,4 @@ module.exports.GetCandidatos = function () {
     }
 
   })
-}
+} */

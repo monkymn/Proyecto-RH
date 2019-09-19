@@ -1,14 +1,16 @@
 //import sql  from 'mssql/msnodesqlv8';
-import { getCandidatos } from './sql.js'
+import { getCandidatos, showConnectionString } from './sql.js'
+
 
 window.addEventListener('load', () => {
 
   var btnCandidatos = document.getElementById('btn_candidatos')
   btnCandidatos.addEventListener('click', getCandidatos)
 
-  getCandidatos(_select)
+  showConnectionString()
   NavigateMenu()
-//showConnectionString()
+  getCandidatos()
+  
 })
 
 function NavigateMenu(){

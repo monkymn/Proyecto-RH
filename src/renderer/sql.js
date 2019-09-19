@@ -1,19 +1,29 @@
 import sql from 'mssql/msnodesqlv8'
 
-module.exports.config = {
+var config = { 
   server: 'CANTON\\', 
-  database: 'RH-Dev',
+  database: 'RH-Dev', 
   driver: 'msnodesqlv8',
   options: {
-    trustedConnection: true
+    trustedConnection: true 
   }
 }
 
 module.exports.showConnectionString = function () {
-  console.log(config)
+  console.log(config) 
 }
+ 
+module.exports.getCandidatos = function(select) {
+   /* const config = {
+    server: 'CANTON\\', 
+    database: 'RH-Dev',
+    driver: 'msnodesqlv8',
+    options: {
+      trustedConnection: true 
+    }
+  } */
 
-module.exports.getCandidatos = function(select){
+
   const pool = new sql.ConnectionPool(config)  
   
   pool.connect((err) => {

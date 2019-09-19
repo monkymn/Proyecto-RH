@@ -11,6 +11,7 @@ if (process.env.NODE_ENV === 'development') {
 app.on('before-quit', () => {
   console.log('saliendo..')
 })
+
 app.on('ready', () => {
     let win = new BrowserWindow({
         width: 1200,
@@ -19,9 +20,11 @@ app.on('ready', () => {
         show: false,
         transparent: true
     })
+
 win.once('ready-to-show', () => {
         win.show()
     })
+
 win.on('closed', () => {
         win = null
         app.quit()
