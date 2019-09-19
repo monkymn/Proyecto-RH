@@ -4,13 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/photon.min.css">
     <script src="frontend.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../assets/js/jquery-3.4.1" type="text/javascript" charset="utf-8"></script>
     <title>RH - Reclutamiento</title>
 </head>
 <body>
-    <div>
-        <h2>Reclutamiento</h2> 
-    </div>
+    <div class="window">
+        <header class="toolbar toolbar-header">
+          <h1 class="title">Reclutamiento</h1>
+        </header>
+        <div class="window-content">
+          <div class="pane-group">
+            <div class="pane pane-sm sidebar">
+
+              <nav class="nav-group">
+                <h5 class="nav-group-title">Secciones</h5>
+                <a id="btn_candidatos" class="nav-group-item">
+                  <span class="icon icon-home"></span>
+                  Candidatos
+                </a>
+                <a class="nav-group-item active">
+                  <span class="icon icon-download"></span>
+                  Empresas
+                </a>
+                <a class="nav-group-item">
+                  <span class="icon icon-folder"></span>
+                  Vacantes
+                </a>
+                
+              </nav>
+            </div>
+            <div class="pane">
+                <div class="toolbar-actions">
+                    <button id="nuevo" class="btn btn-default active">
+                        <span class="icon icon-plus-squared"></span>
+                        Nuevo
+                    </button>
+                    <button class="btn btn-default">
+                        <span class="icon icon-pencil"></span>
+                        Modificar
+                    </button>
+
+                    <button class="btn btn-default">
+                        <span class="icon icon-trash"></span>
+                        Eliminar
+                    </button>
+                
+                    <button class="btn btn-default">
+                      <span class="icon icon-home icon-text"></span>
+                      Filters
+                    </button>
+                
+                    <button class="btn btn-default btn-dropdown pull-right">
+                      <span class="icon icon-megaphone"></span>
+                    </button>
+                  </div>
+
+              <table id="table" class="table-striped">
+                <thead>
+                  <tr>
+                    <th>Nombre</th>
+                    <th>Apellido Paterno</th>
+                    <th>Apellido Materno</th>
+                    <th>FechaAlta</th>
+                    <th>IdVacante</th>
+                    <th>Estatus</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td id="name"></td>
+                    <td id="paterno"> </td>
+                    <td id="materno"></td>
+                  </tr>  
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+        </div>
+        <footer class="toolbar toolbar-footer">
+          <h1 class="title">Notificaciones</h1>
+        </footer>
+      </div>
 </body>
 </html>

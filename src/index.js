@@ -13,7 +13,11 @@ app.on('before-quit', () => {
 })
 app.on('ready', () => {
     let win = new BrowserWindow({
-        show: false
+        width: 1200,
+        height: 800,
+        autoHideMenuBar: true,
+        show: false,
+        transparent: true
     })
 win.once('ready-to-show', () => {
         win.show()

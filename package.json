@@ -13,7 +13,9 @@
   "dependencies": {
     "cross-env": "^5.2.0",
     "electron-compile": "^6.4.4",
-    "electron-debug": "^3.0.0"
+    "electron-debug": "^3.0.0",
+    "msnodesqlv8": "^0.7.3",
+    "mssql": "^5.1.0"
   },
   "devDependencies": {
     "devtron": "^1.4.0",
